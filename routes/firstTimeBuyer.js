@@ -34,7 +34,7 @@ router.get("/ftb-mortgages-new", isLoggedIn, function(req, res){
 });
 
 //Create Route
-router.post("/ftb-mortgages-post", function(req, res){
+router.post("/ftb-mortgages-post", isLoggedIn, function(req, res){
   //Create mortgage advice post
   var metatitle = req.body.firstTimeBuyer.metatitle;
   var metadescription = req.body.firstTimeBuyer.metadescription;
